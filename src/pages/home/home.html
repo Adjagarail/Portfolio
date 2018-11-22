@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title> Brieffing </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="page-home">
+
+  <ion-slides pager>
+    <ion-slide *ngFor="let slide of slides">
+      <ion-toolbar>
+        <ion-buttons end>
+          <button ion-button color="primary"></button>
+        </ion-buttons>
+      </ion-toolbar>
+      <img [src]="slide.image" class="slide-image"/>
+      <h2 class="slide-title" [innerHTML]="slide.title"></h2>
+      <p [innerHTML]="slide.description"></p>
+    </ion-slide>
+    <ion-slide>
+      <ion-toolbar>
+      </ion-toolbar>
+      <img src="../../assets/imgs/plus.png" class="slide-image" alt="Image logo plus"/>
+      <h2 class="slide-title"> Pour plus d'informations </h2>
+      <button ion-button>
+        Cliquez ici &nbsp;
+        <ion-icon name="arrow-forward"></ion-icon>
+        <a href="#"></a>
+      </button>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
